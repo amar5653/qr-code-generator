@@ -25,7 +25,7 @@ h1{
     margin-left:10%;
     width:80%;
 }
-#input{
+#input-box{
     font-size:25px;
     border:none;
     outline:none;
@@ -37,6 +37,7 @@ h1{
     width:80%;
 }
 #btn{
+    cursor: pointer;
     font-size:20px;
     border:none;
     outline:none;
@@ -48,13 +49,43 @@ h1{
     margin-left:25%;
     width:50%;
 }
-#qr-img{
+.img-box{
+    width:200px;
+    border-radius: 5px;
     overflow:hidden;
     max-height:0;  
 }
-.show-img{
-    width:100px;
-    height:100px;
-    margin-left:40%;
-    display:block;
+.img-box#qr-img{
+    max-height:300px;
+   width:100%;
+   padding:10px;
+   transition:max-height 1s;
+}
+.img-box.show-img{
+    
+    max-height: 300px;
+margin:10px auto;
+
+  
+}
+.error{
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake{
+    0%{
+        transform:translateX(0);
+    }
+    25%{
+        transform:translateX(2px);
+    }
+    50%{
+        transform:translateX(0);
+    }
+    75%{
+        transform: translateX(-2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
